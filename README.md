@@ -22,6 +22,11 @@ git config user.email "tucorreo@ejemplo.com"
 git config user.name "Tu Nombre"
 ```
 
+Ver lista de configuraciones del usuario
+```cmd
+git config --list
+```
+
 Ver historial de commits 
 ```cmd
 git log --oneline
@@ -47,8 +52,49 @@ Ver información detallada de la etiqueta
 git show <nombre_etiqueta>
 ```
 
-Enviar etiquetas al repositorio remoto
+Enviar etiqueta al repositorio remoto
 ```cmd
 git push origin <nombre_etiqueta>
 ```
+
+Enviar etiquetas en conjunto al repositorio remoto
+```cmd
+git push origin --tags
+```
+
+Verificar remotos existentes
+```cmd
+git remote -v
+```
+
+Eliminar repositorio remoto no deseado
+```cmd
+git remote remove <nombre_repositorio>
+```
+
+Desoonectar repositorio remoto
+```cmd
+git remote rm origin
+```
+
+Verificar claves SSH existente
+```cmd
+ls ~/.ssh
+```
+
+Generar una nueva clave SSH
+```cmd
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+Iniciar agente de autenticación
+```cmd
+eval "$(ssh-agent)"
+```
+
+Agregar clave privada al proyecto
+```cmd
+ssh-add ~/.ssh/<clave_privada>
+```
+
 
